@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1 id="title">Encuesta de salud mental en COVID19</h1>
+    <p id="description">
+      Completa el siguiente cuestionario para evaluar el estado la salud mental
+      de la sociedad en cuarentena
+    </p>
+    <form id="survey-form">
+      <div class="form-item">
+        <label id="name-label" for="name">Nombre</label>
+        <input
+          class="form-input"
+          required
+          id="name"
+          type="text"
+          placeholder="Ingresa tu nombre"
+        />
+      </div>
+      <div class="form-item">
+        <label id="email-label" for="email">Email</label>
+        <input
+          class="form-input"
+          required
+          id="email"
+          type="email"
+          placeholder="Ingresa un email"
+        />
+      </div>
+      <div class="form-item">
+        <label id="number-label" for="number">Numero de Contacto</label>
+        <input
+          class="form-input"
+          id="number"
+          type="number"
+          max="20"
+          min="10"
+          placeholder="Ingresa un numero de celular"
+        />
+      </div>
+      <h2>Que te preocupa mas?</h2>
+      <select name="tiempos" id="dropdown">
+        <option value="">--selecciona una opcion--</option>
+        <option value="pasado">Pasado</option>
+        <option value="presente">Presente</option>
+        <option value="futuro">Futuro</option>
+      </select>
+
+      <h2>Como te imaginas al terminar la cuarentena?</h2>
+      <div>
+        <input
+          type="checkbox"
+          value="anti"
+          id="antisocial"
+          name="antisocial"
+          checked
+        />
+        <label for="antisocial">Antisocial</label>
+      </div>
+      <div>
+        <input type="checkbox" value="cc" id="consiente" name="consciente" />
+        <label for="consciente">Mas consciente</label>
+      </div>
+      <div>
+        <input type="checkbox" value="ansias" id="ansioso" name="ansioso" />
+        <label for="ansioso">Con ansias de ver a mis seres queridos</label>
+      </div>
+      <h2>Con quien estas pasando la cuarentena?</h2>
+
+      <div>
+        <input type="radio" id="solo" name="company" value="solo" checked />
+        <label for="solo">Solo</label>
+      </div>
+
+      <div>
+        <input type="radio" id="pareja" name="company" value="pareja" />
+        <label for="pareja">Con mi pareja</label>
+      </div>
+      <h2>Que actividades le ayudan a distraerse?</h2>
+      <textarea id="comment" name="comment" rows="5" cols="33">
+Escriba aqui un comentario...
+        </textarea
+      >
+      <button id="submit" type="submit">Aceptar</button>
+    </form>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
